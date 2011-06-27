@@ -1,17 +1,20 @@
-@mixin cute-scrollbar($width: 12px, $track-background: green, $thumb-color: #2e3132, $inactive-thumb-color: yellow)
+@mixin cute-scrollbar($width: 8px, $track-background: grey, $thumb-color: grey, $inactive-thumb-color: grey)
   &::-webkit-scrollbar
     width: $width
 
   &::-webkit-scrollbar-track
     border-radius: 10px
-    background: $track-background
-    +opacity (0.2)
-
+    background: grey
+    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 1px 1px inset
 
   &::-webkit-scrollbar-thumb
     border-radius: 10px
-    background: $thumb-color 0.5
+    background: $thumb-color
+    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.7) 0 1px 7px 0px inset
+
 
   &::-webkit-scrollbar-thumb:window-inactive
-    background: $inactive-thumb-color
+    border-radius: 10px
+    background: $thumb-color
+    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 0, rgba(0, 0, 0, 0.4) 0 1px 1px 1px inset
 
