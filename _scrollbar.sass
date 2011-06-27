@@ -1,0 +1,17 @@
+@mixin cute-scrollbar($width: 12px, $track-background: green, $thumb-color: #2e3132, $inactive-thumb-color: yellow)
+  &::-webkit-scrollbar
+    width: $width
+
+  &::-webkit-scrollbar-track
+    border-radius: 10px
+    background: $track-background
+    +opacity (0.2)
+
+
+  &::-webkit-scrollbar-thumb
+    border-radius: 10px
+    background: $thumb-color 0.5
+
+  &::-webkit-scrollbar-thumb:window-inactive
+    background: $inactive-thumb-color
+
